@@ -10,7 +10,7 @@ def read(filename):
 
 
 setup(
-    name="devfood",
+    name="delivery",
     version="0.1.0",
     description="delivery app",
     packages=find_packages(),

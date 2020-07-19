@@ -48,6 +48,6 @@ class UserAdmin(ModelView):
     @action("send_email", "Send email to all users", "Are you sure?")
     def send_email(self, ids):
         users = User.query.filter(User.id.in_(ids)).all()
-        # 1) redirect prar um form para escrver a mensagem do email
+        # 1) redirect prar um form para escrever a mensagem do email
         # 2) enviar o email
         flash(f"{len(users)} emails enviados.", "success")

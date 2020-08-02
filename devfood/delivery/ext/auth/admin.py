@@ -7,7 +7,7 @@ from delivery.ext.db import db
 
 
 class UserAdmin(ModelView):
-    """"Interface admin de user"""
+    """Interface admin de user"""
 
     # def format_user(self, request, user, *args):
     #     return user.email.split("@")[0]
@@ -39,15 +39,15 @@ class UserAdmin(ModelView):
 
     @action("toggle_admin", "Toggle admin status", "Are you sure?")
     def toggle_admin_status(self, ids):
-
-        for user in (users := User.query.filter(User.id.in_(ids)).all()):
+        users = User.query.filter(User.id.in_(ids))
+        for user in users.all():
             user.admin = not user.admin
         db.session.commit()
-        flash(f"{len(users)} usuários alterados com sucesso!", "success")
+        flash(f"{users.count()} usuários alterados com sucesso!", "success")
 
     @action("send_email", "Send email to all users", "Are you sure?")
     def send_email(self, ids):
         users = User.query.filter(User.id.in_(ids)).all()
-        # 1) redirect prar um form para escrever a mensagem do email
+        # 1) redirect para um form para escrever a mensagem do email
         # 2) enviar o email
         flash(f"{len(users)} emails enviados.", "success")

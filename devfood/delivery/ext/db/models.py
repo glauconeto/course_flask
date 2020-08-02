@@ -2,6 +2,7 @@
 
 from delivery.ext.db import db
 
+
 class Category(db.Model):
     __tablename__ = "category"
     id = db.Column("id", db.Integer, primary_key=True)

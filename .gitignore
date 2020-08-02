@@ -1,1 +1,3 @@
 devfood/.venv/
+devfood/.vscode/
+delivery/.secrets.*

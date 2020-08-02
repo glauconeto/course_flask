@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, current_app
+from flask import Blueprint, current_app, render_template
 
 bp = Blueprint("site", __name__)
 

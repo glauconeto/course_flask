@@ -1,4 +1,0 @@
-FOO = "ZAZ"
-BAR = "FOO"
-
-

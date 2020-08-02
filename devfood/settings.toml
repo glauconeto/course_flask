@@ -12,11 +12,13 @@ EXTENSIONS = [
 ]
 
 [development]
+DEBUG = true
 SQLALCHEMY_DATABASE_URI = "sqlite:///delivery.db"
+SQLALCHEMY_TRACK_MODIFICATIONS = false
 DEBUG_TB_TEMPLATE_EDITOR_ENABLED = true
 DEBUG_TB_PROFILER_ENABLED = true
 DEBUG_TB_INTERCEPT_REDIRECTS = false
-ADMIN_NAME = "Twitch Food (dev mode)"]
+ADMIN_NAME = "DEVFOOD (dev mode)"
 EXTENSIONS = [
     "delivery.ext.db:init_app",
     "delivery.ext.auth:init_app",
@@ -27,7 +29,7 @@ EXTENSIONS = [
     "delivery.ext.hooks:init_app",
 ]
 
+
 [production]
 SQLALCHEMY_TRACK_MODIFICATIONS = false
 SQLALCHEMY_DATABASE_URI = "mysql://...."
-ADMIN_NAME = "outro nome"

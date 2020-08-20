@@ -27,7 +27,6 @@ jobs:
     - name: Install dependencies
       run: |
        make install
-
     - name: Set a dummy secret key
       run: echo "::set-env name=FLASK_SECRET_KEY::avocodes01"
 

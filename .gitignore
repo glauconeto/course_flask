@@ -1,4 +1,4 @@
-devfood/venv/
+devfood/.venv/
 devfood/.vscode/
 delivery/.secrets.*
 /.vscode/
